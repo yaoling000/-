@@ -28,4 +28,5 @@ def home():
     return "Prompt Store is running!", 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    from gunicorn.app.base import BaseApplication
+    app.run(debug=True)
